@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Três Caixas com DIV e CSS</title>
+    <style>
+        /* Definindo estilo básico para o corpo da página */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0; /* Cor de fundo clara */
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Estilo das caixas */
+        .box {
+            width: 200px; /* Largura fixa de cada caixa */
+            height: 200px; /* Altura fixa de cada caixa */
+            margin: 20px; /* Espaçamento em volta das caixas */
+            background-color: #4CAF50; /* Cor de fundo verde */
+            display: inline-block; /* Mantém as caixas lado a lado */
+            text-align: center; /* Centraliza o texto horizontalmente */
+            color: white; /* Cor do texto */
+            line-height: 200px; /* Centraliza o texto verticalmente */
+            font-size: 18px; /* Tamanho da fonte */
+        }
+
+        /* Estilo para diferentes cores das caixas */
+        .box1 { background-color: #4CAF50; } /* Caixa verde */
+        .box2 { background-color: #2196F3; } /* Caixa azul */
+        .box3 { background-color: #FF5722; } /* Caixa laranja */
+    </style>
+</head>
+<body>
+
+    <!-- Primeira caixa com estilo da classe box e box1 -->
+    <div class="box box1">Caixa 1</div>
+
+    <!-- Segunda caixa com estilo da classe box e box2 -->
+    <div class="box box2">Caixa 2</div>
+
+    <!-- Terceira caixa com estilo da classe box e box3 -->
+    <div class="box box3">Caixa 3</div>
+
+</body>
+</html>

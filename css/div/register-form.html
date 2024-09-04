@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pet</title>
+    <style>
+        /* Estilo básico da página */
+        body {
+            font-family: Arial, sans-serif; /* Fonte para toda a página */
+            background-color: #f4f4f4; /* Cor de fundo clara */
+            margin: 0;
+            padding: 30px;
+            display: flex; /* Flexbox para centralizar o conteúdo */
+            justify-content: center; /* Centraliza horizontalmente */
+            align-items: center; /* Centraliza verticalmente */
+            height: 100vh; /* Altura da tela completa */
+        }
+
+        /* Estilo para o contêiner do formulário */
+        .form-container {
+            background-color: white; /* Fundo branco para o formulário */
+            padding: 70px; /* Espaçamento interno */
+            border-radius: 10px; /* Bordas arredondadas */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+            width: 400px; /* Largura do formulário */
+        }
+
+        /* Estilo para o título */
+        .form-container h2 {
+            text-align: center; /* Centraliza o título */
+            color: #333; /* Cor do título */
+        }
+
+        /* Estilo para os rótulos dos campos */
+        .form-container label {
+            font-size: 14px;
+            color: #555; /* Cor dos rótulos */
+            display: block; /* Exibe cada rótulo em uma linha separada */
+            margin-top: 10px; /* Espaçamento acima dos rótulos */
+        }
+
+        /* Estilo para os campos de entrada */
+        .form-container input,
+        .form-container select {
+            width: 100%; /* Largura completa do contêiner */
+            padding: 10px; /* Espaçamento interno */
+            margin-top: 5px; /* Espaçamento acima dos campos */
+            border: 1px solid #ccc; /* Borda cinza clara */
+            border-radius: 5px; /* Bordas arredondadas */
+            font-size: 14px; /* Tamanho do texto */
+        }
+
+        /* Estilo para o botão de envio */
+        .form-container button {
+            width: 100%; /* Largura completa */
+            padding: 12px; /* Espaçamento interno */
+            margin-top: 20px; /* Espaçamento acima do botão */
+            background-color: #4CAF50; /* Cor de fundo verde */
+            color: white; /* Cor do texto */
+            border: none; /* Remove a borda padrão */
+            font-size: 16px; /* Tamanho da fonte */
+            border-radius: 5px; /* Bordas arredondadas */
+            cursor: pointer; /* Cursor de "mão" ao passar sobre o botão */
+        }
+
+        /* Efeito hover no botão */
+        .form-container button:hover {
+            background-color: #45a049; /* Muda a cor do botão ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contêiner do formulário de cadastro do pet -->
+    <div class="form-container">
+        <h2>Cadastro de Pet</h2>
+
+        <!-- Campo para o nome do pet -->
+        <label for="pet-name">Nome do Pet</label>
+        <input type="text" id="pet-name" name="pet-name" placeholder="Digite o nome do pet">
+
+        <!-- Campo para o tipo de animal -->
+        <label for="pet-type">Tipo de Animal</label>
+        <select id="pet-type" name="pet-type">
+            <option value="cachorro">Cachorro</option>
+            <option value="gato">Gato</option>
+            <option value="ave">Ave</option>
+            <option value="outro">Outro</option>
+        </select>
+
+        <!-- Campo para a idade do pet -->
+        <label for="pet-age">Idade</label>
+        <input type="number" id="pet-age" name="pet-age" placeholder="Digite a idade do pet">
+
+        <!-- Campo para o nome do dono -->
+        <label for="owner-name">Nome do Dono</label>
+        <input type="text" id="owner-name" name="owner-name" placeholder="Digite o nome do dono">
+
+        <!-- Botão de envio -->
+        <button type="submit">Cadastrar</button>
+    </div>
+
+</body>
+</html>

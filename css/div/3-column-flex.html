@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout com DIVs e Bordas</title>
+    <style>
+        /* Remove margens e define padding padrão */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            /* Define a altura do corpo como a altura total da janela */
+        }
+
+        /* Estiliza as divs */
+        .box {
+            flex: 1;
+            /* Faz com que as divs se expandam para preencher o espaço disponível */
+            border: 2px solid #959292;
+            /* Define a borda das divs */
+            text-align: center;
+            /* Centraliza o texto dentro das divs */
+        }
+
+        /* Estilo específico para a primeira div */
+        .box1 {
+            background-color: #ff9999;
+            /* Cor de fundo rosa claro */
+        }
+
+        /* Estilo específico para a segunda div */
+        .box2 {
+            background-color: #99ff99;
+            /* Cor de fundo verde claro */
+        }
+
+        /* Estilo específico para a terceira div */
+        .box3 {
+            background-color: #9999ff;
+            /* Cor de fundo azul claro */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Primeira div -->
+    <div class="box box1">
+        Div 1
+    </div>
+
+    <!-- Segunda div -->
+    <div class="box box2">
+        Div 2
+    </div>
+
+    <!-- Terceira div -->
+    <div class="box box3">
+        Div 3
+    </div>
+</body>
+
+</html>
