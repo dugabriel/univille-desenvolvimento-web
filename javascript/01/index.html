@@ -1,12 +1,76 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <title>Hello JS!</title>
 </head>
+
 <body>
 
-<script>
-    console.log("olá");
-</script>
+    <script>
+        //Exemplo inicial
+        //console.log("Olá, seja bem-vindo!");
+
+        //Exemplo função 1
+        /*saudar()
+
+        function saudar() {
+            console.log("Olá, seja bem-vindo! (Com função =D)");
+        }*/
+
+        //Exemplo função 2
+        /*function saudar(nome) {
+            console.log("Olá, " + nome + ", seja bem-vindo!");
+        }
+
+        saudar("João");  // Exibe "Olá, João, seja bem-vindo!"
+        saudar("Maria");  // Exibe "Olá, Maria, seja bem-vindo!"*/
+
+        //Exemplo de função retornando valor
+        /*function somar(a, b) {
+            return a + b;
+        }
+
+        let resultado = somar(3, 4);  // Armazena o valor 7
+        console.log(resultado);  // Exibe 7*/
+
+        //Exemplo de array
+        /*let frutas = ["maçã", "banana", "laranja"];
+        console.log(frutas[1]);  // Exibe "maçã"
+
+        frutas.push("uva");
+        console.log(frutas);  // ["maçã", "banana", "laranja", "uva"]
+
+        frutas.pop();
+        console.log(frutas);  // ["maçã", "banana", "laranja"]
+
+        console.log(frutas.length);  // 3*/
+
+        //Exemplo de objeto
+        let carro = {
+            marca: "Toyota",
+            modelo: "Corolla",
+            ano: 2022
+        };
+
+        console.log(carro.marca);  // Exibe "Toyota"
+
+        let pessoa = new Object();
+        pessoa.nome = "João";
+        pessoa.idade = 30;
+        pessoa.profissao = "Desenvolvedor";
+
+        console.log(pessoa.idade);
+
+
+        //let idade = prompt("Digite sua idade: ")
+        const idade = Number(prompt("Digite sua idade:", ""));
+        console.log(idade)
+        //document.write("Bem vindo, ", nome);
+
+
+
+    </script>
 </body>
+
 </html>
