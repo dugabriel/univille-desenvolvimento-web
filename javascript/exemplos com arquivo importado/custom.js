@@ -1,18 +1,25 @@
 console.log("Arquivo carregado com sucesso!");
 
+
+/* exemplo de matriz
 let resultMatriz = matriz(5, 6);
 console.log(resultMatriz);
-
+*/
 
 function clickButton() {
     console.log("botão clicado!");
     console.log(getTextValue());
+    setFieldValue("campo setado!");
 }
 
 
 function getTextValue() {
     return document.querySelector("#text").value;
     //return document.getElementById("text").value;    
+}
+
+function setFieldValue(text) {
+    document.querySelector("#text").value = text;
 }
 
 
