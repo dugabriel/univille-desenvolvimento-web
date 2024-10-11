@@ -10,6 +10,7 @@ function clickButton() {
     console.log("botão clicado!");
     console.log(getTextValue());
     setFieldValue("campo setado!");
+    generateHTML();
 }
 
 
@@ -20,6 +21,22 @@ function getTextValue() {
 
 function setFieldValue(text) {
     document.querySelector("#text").value = text;
+}
+
+function generateHTML() {
+    let novoTitulo = document.createElement("h1");
+    novoTitulo.textContent = "Título criado com JavaScript";
+
+    // Criando um parágrafo
+    let novoParagrafo = document.createElement("p");
+    novoParagrafo.textContent = "Este parágrafo foi gerado dinamicamente.";
+
+    // Inserindo os novos elementos no container
+    let container = document.getElementById("output");
+    container.appendChild(novoTitulo);
+    container.appendChild(novoParagrafo);
+
+    //document.getElementById("output").innerHTML = "<h1>Olá mundo!</h1>";
 }
 
 
