@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+
+<body>
+
+    <label for="contador">Contador</label>
+    <input type="text" id="contador" value="1" />
+    <button onclick="contar()">Contar!</button>
+
+    <script>
+        console.log("Funcionou o meu js?")
+
+        function contar() {
+            let valorAtual = parseInt(document.getElementById("contador").value);
+            let incrementa = valorAtual + 1;
+
+            document.getElementById("contador").value = incrementa;
+        }
+
+
+   
+
+    </script>
+</body>
+
+</html>
