@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Vue.js Simples</title>
+
+
+    <!-- Adicione o Vue.js via CDN -->
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <!-- Interface Vue, Tudo que estiver dentro das chaves, ex: {{ aqui }} serão variáveis que receberão dados do vue-->
+        <h1>{{ message }}</h1>
+
+
+        <h4> {{ message2 }}</h4>
+
+
+        <!--Para campos input, quando necessário alterar o valor se usa o atributo do vue chamado v-model-->
+        <input type="text" v-model="text">
+
+        <!-- No vue, para criar um botao com ação usamos o @click ao invés do onclick do html-->
+        <button @click="changeMessage">Clique Aqui</button>
+    </div>
+
+    <script>
+
+        // Iniciando a aplicação Vue
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message: "Olá, Vue.js!",
+                    message2: "Nova mensagem",
+                    text: "Valor default"
+                };
+            },
+            methods: {
+                //essa função está sendo usada no @click no HTML que é renderizada pelo vue
+                changeMessage() {
+                    //this informa que estou alterando a variável dentro desse objeto/escopo
+                    this.message = "Você clicou no botão!";
+                    this.message2 = "Criando um novo valor...";
+                    this.text = "Alterado o valor no campo usando o v-model!"
+                }
+            }
+        });
+
+
+        //Para iniciar o vue, eu preciso setar ele em um ID de div por exemplo.
+        //   <div id="app">
+        app.mount('#app');
+    </script>
+</body>
+
+</html>
