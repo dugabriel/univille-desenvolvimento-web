@@ -1,21 +1,30 @@
 // COMPONENTE HOME (PRINCIPAL)
 
+const PaginaHome = {
+    template: `
+    <div>
+      <h1>Bem-vindo à Página Inicial</h1>
+      <p>Selecione uma das opções acima para ver mais informações.</p>
+      <h4> {{ variavelExemplo }} </h4>
+    </div>
+  `,
+  data() {
+    return {
+        variavelExemplo : "Texto vindo de variael no componente"
+    }
+  }
+};
+
 const home = Vue.createApp({
     data() {
       return {
         paginaAtual: 'home', // Página inicial
         componentes: {
-          home: {
-            template: `
-              <div>
-                <h1>Bem-vindo à Página Inicial</h1>
-                <p>Selecione uma das opções acima para ver mais informações.</p>
-              </div>
-            `
-          },
+          home: PaginaHome, // carrega o template home
           sobre: PaginaSobre, // Carrega o componente "Sobre"
           contato: PaginaContato // Carrega o componente "Contato"
-        }
+        },
+        outraVariavelExemplo: "TITULO FIXO POR VARIAVEL"
       };
     },
     methods: {
@@ -31,6 +40,7 @@ const home = Vue.createApp({
           <button @click="trocaPagina('sobre')">Sobre Nós</button>
           <button @click="trocaPagina('contato')">Contato</button>
         </nav>
+        <h4> {{ outraVariavelExemplo }}
   
         <section>
           <!-- Carrega o componente dinamicamente -->
