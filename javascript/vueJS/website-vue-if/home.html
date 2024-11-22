@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue - Páginas Dinâmicas</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+  <style>
+    nav {
+      margin-bottom: 20px;
+    }
+    button {
+      margin-right: 10px;
+      padding: 10px 20px;
+      cursor: pointer;
+    }
+    section {
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Div principal onde Vue irá montar a aplicação -->
+  <div id="app"></div>
+
+  <script>
+    // Definindo o componente "PaginaSobre"
+    const PaginaSobre = {
+      template: `
+        <div>
+          <h1>Sobre Nós</h1>
+          <p>Somos uma empresa dedicada a oferecer os melhores serviços. Nossa missão é proporcionar a melhor experiência aos nossos clientes.</p>
+        </div>
+      `
+    };
+
+    // Definindo o componente "PaginaContato"
+    const PaginaContato = {
+      template: `
+        <div>
+          <h1>Contato</h1>
+          <p>Entre em contato conosco através do formulário abaixo:</p>
+          <form>
+            <p> {{ message }} </p>
+            <label for="nome">Seu Nome:</label>
+            <input type="text" id="nome" name="nome"><br><br>
+
+            <label for="mensagem">Mensagem:</label><br>
+            <textarea id="mensagem" name="mensagem"></textarea><br><br>
+
+            <button type="submit">Enviar</button>
+          </form>
+        </div>
+      `
+    };
+
+    // Criando a instância Vue
+    const app = Vue.createApp({
+      data() {
+        return {
+          paginaAtual: 'home', // Página inicial
+          message: "Mensagem dinamica"
+        };
+      },
+      components: {
+        PaginaSobre,
+        PaginaContato
+      },
+      template: `
+        <div>
+          <nav>
+            <!-- Navegação entre as páginas -->
+            <button @click="paginaAtual = 'home'">Página Inicial</button>
+            <button @click="paginaAtual = 'sobre'">Sobre Nós</button>
+            <button @click="paginaAtual = 'contato'">Contato</button>
+          </nav>
+
+          <section>
+            <!-- Condicionalmente carrega o conteúdo da página -->
+            <p> {{ message }} </p>
+            <div v-if="paginaAtual === 'home'">
+              <h1>Bem-vindo à Página Inicial</h1>
+              <p>Selecione uma das opções acima para ver mais informações.</p>
+            </div>
+            <div v-if="paginaAtual === 'sobre'">
+              <PaginaSobre />
+            </div>
+            <div v-if="paginaAtual === 'contato'">
+              <PaginaContato />
+            </div>
+          </section>
+        </div>
+      `
+    });
+
+    // Monta a aplicação Vue no elemento com id "app"
+    app.mount('#app');
+  </script>
+
+</body>
+</html>
